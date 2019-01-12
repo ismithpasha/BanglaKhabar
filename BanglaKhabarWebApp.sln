@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiManager", "ApiManager\Ap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbManager", "DbManager\DbManager.csproj", "{E4980562-807E-4060-AE4F-D77573C3F62F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BanglaKhabarWeb", "BanglaKhabarWeb\BanglaKhabarWeb.csproj", "{32ECC6AE-780E-4EDB-B27B-277F97A8B935}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BanglaKhabarAdmin", "BanglaKhabarAdmin\BanglaKhabarAdmin.csproj", "{A2DCA651-BA92-442F-8D4B-284CE1DEE79F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{E4980562-807E-4060-AE4F-D77573C3F62F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4980562-807E-4060-AE4F-D77573C3F62F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4980562-807E-4060-AE4F-D77573C3F62F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32ECC6AE-780E-4EDB-B27B-277F97A8B935}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32ECC6AE-780E-4EDB-B27B-277F97A8B935}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32ECC6AE-780E-4EDB-B27B-277F97A8B935}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32ECC6AE-780E-4EDB-B27B-277F97A8B935}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2DCA651-BA92-442F-8D4B-284CE1DEE79F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2DCA651-BA92-442F-8D4B-284CE1DEE79F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2DCA651-BA92-442F-8D4B-284CE1DEE79F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2DCA651-BA92-442F-8D4B-284CE1DEE79F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
