@@ -16,3 +16,14 @@ D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\A
 D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\ApiManager\obj\Debug\ApiManager.csprojAssemblyReference.cache
 D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\ApiManager\bin\Debug\DbManager.dll
 D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\ApiManager\bin\Debug\DbManager.pdb
+E:\IsmithPasha\GitProjects\BanglaKhabarSolution\BanglaKhabar\ApiManager\bin\Debug\ApiManager.dll
+E:\IsmithPasha\GitProjects\BanglaKhabarSolution\BanglaKhabar\ApiManager\bin\Debug\ApiManager.pdb
+E:\IsmithPasha\GitProjects\BanglaKhabarSolution\BanglaKhabar\ApiManager\bin\Debug\DbManager.dll
+E:\IsmithPasha\GitProjects\BanglaKhabarSolution\BanglaKhabar\ApiManager\bin\Debug\Newtonsoft.Json.dll
+E:\IsmithPasha\GitProjects\BanglaKhabarSolution\BanglaKhabar\ApiManager\bin\Debug\DbManager.pdb
+E:\IsmithPasha\GitProjects\BanglaKhabarSolution\BanglaKhabar\ApiManager\bin\Debug\Newtonsoft.Json.xml
+E:\IsmithPasha\GitProjects\BanglaKhabarSolution\BanglaKhabar\ApiManager\obj\Debug\ApiManager.csprojAssemblyReference.cache
+E:\IsmithPasha\GitProjects\BanglaKhabarSolution\BanglaKhabar\ApiManager\obj\Debug\ApiManager.csproj.CoreCompileInputs.cache
+E:\IsmithPasha\GitProjects\BanglaKhabarSolution\BanglaKhabar\ApiManager\obj\Debug\ApiManager.csproj.CopyComplete
+E:\IsmithPasha\GitProjects\BanglaKhabarSolution\BanglaKhabar\ApiManager\obj\Debug\ApiManager.dll
+E:\IsmithPasha\GitProjects\BanglaKhabarSolution\BanglaKhabar\ApiManager\obj\Debug\ApiManager.pdb

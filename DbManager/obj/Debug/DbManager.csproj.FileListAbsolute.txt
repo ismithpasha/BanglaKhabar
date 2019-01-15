@@ -28,3 +28,8 @@ D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\D
 D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\DbManager\obj\Debug\DbManager.csproj.CoreCompileInputs.cache
 D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\DbManager\obj\Debug\DbManager.dll
 D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\DbManager\obj\Debug\DbManager.pdb
+E:\IsmithPasha\GitProjects\BanglaKhabarSolution\BanglaKhabar\DbManager\bin\Debug\DbManager.dll
+E:\IsmithPasha\GitProjects\BanglaKhabarSolution\BanglaKhabar\DbManager\bin\Debug\DbManager.pdb
+E:\IsmithPasha\GitProjects\BanglaKhabarSolution\BanglaKhabar\DbManager\obj\Debug\DbManager.csproj.CoreCompileInputs.cache
+E:\IsmithPasha\GitProjects\BanglaKhabarSolution\BanglaKhabar\DbManager\obj\Debug\DbManager.dll
+E:\IsmithPasha\GitProjects\BanglaKhabarSolution\BanglaKhabar\DbManager\obj\Debug\DbManager.pdb
