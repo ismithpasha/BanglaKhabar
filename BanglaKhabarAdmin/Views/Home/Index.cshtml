@@ -3,58 +3,39 @@
 }
 
 
+<br />
+<br />
+<div class="container card card-header">
 
-<div class="col-sm-4 col-sm-offset-4">
+    <div class="row" style="padding:30px;">
+        <div class="col-sm-12">
 
-    @if (Html.Raw(TempData["msgAlert"]).ToString() == "N")
-    {
-        <div class="alert alert-warning alert-dismissable">
-            <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
-            <h4 class="text-center">@Html.Raw(TempData["msgAlertDetails"]).ToString().</h4>
-        </div>
-
-
-    }
-
-    @if (Html.Raw(TempData["msgAlert"]).ToString() == "NotAuthorized")
-    {
-        <div class="modal hide fade" id="loginModalNotAuthorized" role="dialog">
-            <div class="modal-dialog">
-
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title">Login</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-
-                    </div>
-                    <div class="modal-body">
-                        <div class="alert alert-danger alert-dismissable">
-                            <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
-                            <h4 class="text-center">Sorry! You are not an authorized user.</h4>
-                        </div><br />
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
+            @if (Html.Raw(TempData["msgAlert"]).ToString() == "N")
+            {
+                <div class="alert alert-warning alert-dismissable">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                    <h4 class="text-center">@Html.Raw(TempData["msgAlertDetails"]).ToString().</h4>
                 </div>
 
-            </div>
+
+            }
+
+            @if (Html.Raw(TempData["msgAlert"]).ToString() == "NotAuthorized")
+            {
+                <div class="alert alert-danger alert-dismissable">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                    <h4 class="text-center">Sorry! You are not an authorized user.</h4>
+                </div>
+            }
+        </div>
+        <div class="col-sm-4">
+
+            <img src="~/Content/Images/Web/logo.png" class="col-sm-12" />
+
         </div>
 
-
-
-    }
-</div>
-
-
-<main id="main">
-
-    <div class="card-body container">
-
-        <div class="row">
-            <h4 class="modal-title">Login</h4>
+        <div class="col-sm-8">
+            <h3>Admin Login</h3>
 
             <form action="@Url.Action("UserLogin", "Security")" method="post" role="form">
                 <div class="form-group">
@@ -75,4 +56,4 @@
       
 
 
-</main>
+</div>
