@@ -1,0 +1,120 @@
+﻿
+@{
+    ViewBag.Title = "SignUp";
+    Layout = "~/Views/Shared/_LayoutSecurity.cshtml";
+}
+
+
+<div class="container">
+
+    <br />
+    <div class="row">
+       
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); padding:20px;">
+            <h4 class="bg-info text-center text-white" style="padding:10px;">Sign up</h4>
+
+            <div class="col-sm-12">
+
+                @if (Html.Raw(TempData["msgAlert"]).ToString() == "N")
+                {
+                    <div class="alert alert-warning alert-dismissable">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                        <h4 class="text-center">@Html.Raw(TempData["msgAlertDetails"]).ToString().</h4>
+                    </div>
+
+
+                }
+
+                @if (Html.Raw(TempData["msgAlert"]).ToString() == "NotAuthorized")
+                {
+                    <div class="modal hide fade" id="loginModalNotAuthorized" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Login</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                                </div>
+                                <div class="modal-body">
+                                    <div class="alert alert-danger alert-dismissable">
+                                        <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                                        <h4 class="text-center">Sorry! You are not an authorized user.</h4>
+                                    </div><br />
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                }
+            </div>
+            <form action="@Url.Action("UserSignUp", "Security")" class="row" method="post" role="form">
+                <div class="form-group col-sm-6">
+                    <label>First Name: *</label>
+                    <input type="text" class="form-control" id="FirstName" name="FirstName" required>
+                </div>
+                <div class="form-group col-sm-6">
+                    <label>Last Name: *</label>
+                    <input type="text" class="form-control" id="LastName" name="LastName" required>
+                </div>
+                <div class="form-group col-sm-6">
+                    <label>Phone: *</label>
+                    <input type="text" class="form-control" id="Phone" name="Phone">
+                </div>
+                <div class="form-group col-sm-6">
+                    <label>Email: *</label>
+                    <input type="email" class="form-control" id="Email" name="Email">
+                </div>
+
+
+                <div class="form-group col-sm-6">
+                    <label for="Password">Password: *</label>
+                    <input type="password" class="form-control" id="Password" name="Password">
+                </div>
+
+                <div class="form-group col-sm-6">
+                    <label for="Password">Confirm Password: *</label>
+                    <input type="password" class="form-control" id="RePassword" name="RePassword">
+                </div>
+
+                <div class="form-group col-sm-6">
+                    <label>Gender: *</label>
+                    <br />
+                    <label class="radio-inline">
+                        <input type="radio" name="Gender" value="male" checked> Male
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="Gender" value="female"> Female
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="Gender" value="other"> Other
+                    </label>
+                </div>
+
+                <div class="form-group col-sm-6">
+                    <label>Birth Date: *</label>
+                    <input type="date" class="form-control" id="BirthDate" name="BirthDate">
+                </div>
+                <br />  <br />
+                <hr />
+                <div class="col-sm-12  text-center">
+                    <button type="submit" class="btn btn-info" style="min-width:150px;">Sign up</button>
+
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-2">
+        </div>
+
+    </div>
+</div>

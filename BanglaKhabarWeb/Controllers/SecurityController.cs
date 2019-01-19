@@ -18,10 +18,14 @@ namespace BanglaKhabarWeb.Controllers
 
         public ActionResult Index()
         {
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Login", "Security");
         }
 
         public ActionResult Login() 
+        {
+            return View();
+        }
+        public ActionResult SignUp()
         {
             return View();
         }
@@ -54,8 +58,9 @@ namespace BanglaKhabarWeb.Controllers
                         Session["SessionUserFirstName"] = userInfo.FirstName;
                         Session["SessionUserFullName"] = userInfo.FullName;
                         Session["SessionUserType"] = userInfo.UserType;
+                        Session["SessionUserGender"] = userInfo.Gender;
 
-                        return RedirectToAction("Index", "Home");
+                        return RedirectToAction("Index", "User");
                     }
                     else
                     {
@@ -66,7 +71,7 @@ namespace BanglaKhabarWeb.Controllers
                         Session["SessionUserFirstName"] = null;
                         Session["SessionUserFullName"] = null;
                         Session["SessionUserType"] = null;
-                        return RedirectToAction("Index", "Home");
+                        return RedirectToAction("Login", "Security");
                     }
                 }
 
@@ -80,7 +85,7 @@ namespace BanglaKhabarWeb.Controllers
                     Session["SessionUserFirstName"] = null;
                     Session["SessionUserFullName"] = null;
                     Session["SessionUserType"] = null;
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Login", "Security");
 
                 }
             }
@@ -93,9 +98,9 @@ namespace BanglaKhabarWeb.Controllers
                 Session["SessionUserFirstName"] = null;
                 Session["SessionUserFullName"] = null;
                 Session["SessionUserType"] = null;
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Login", "Security");
             }
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Login", "Security");
         }
 
         public ActionResult UserSignUp(string FirstName, string LastName, string Phone, string Email, string Password, string RePassword, string Gender, string BirthDate)
@@ -111,7 +116,7 @@ namespace BanglaKhabarWeb.Controllers
                     Session["SessionUserFirstName"] = null;
                     Session["SessionUserFullName"] = null;
                     Session["SessionUserType"] = null;
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Login", "Security");
                 }
                 SignUpEntity signUpEntity = new SignUpEntity();
                 signUpEntity.FirstName = FirstName;
@@ -132,15 +137,11 @@ namespace BanglaKhabarWeb.Controllers
                 var responseModel = JsonConvert.DeserializeObject<ResponseMessage>(response);
 
                 if (responseModel.MessageCode == "Y")
-                {
-                    var userInfo = JsonConvert.DeserializeObject<UserInfo>(responseModel.Content.ToString());
-
-                   
+                {               
                         TempData["msgAlert"] = "Y";
                         TempData["msgAlertDetails"] = responseModel.Message.ToString();
-              
-                        return RedirectToAction("Index", "Home");
-                    
+             
+                    return RedirectToAction("Login", "Security");
                 }
 
 
@@ -153,7 +154,7 @@ namespace BanglaKhabarWeb.Controllers
                     Session["SessionUserFirstName"] = null;
                     Session["SessionUserFullName"] = null;
                     Session["SessionUserType"] = null;
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("SignUp", "Security");
 
                 }
             }
@@ -166,9 +167,9 @@ namespace BanglaKhabarWeb.Controllers
                 Session["SessionUserFirstName"] = null;
                 Session["SessionUserFullName"] = null;
                 Session["SessionUserType"] = null;
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("SignUp", "Security");
             }
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("SignUp", "Security");
         }
 
         public ActionResult Logout()

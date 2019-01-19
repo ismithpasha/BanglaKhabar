@@ -2,51 +2,6 @@
     ViewBag.Title = "Home Page";
 }
 
-
-<div class="col-sm-4 col-sm-offset-4">
-
-    @if (Html.Raw(TempData["msgAlert"]).ToString() == "N")
-    {
-        <div class="alert alert-warning alert-dismissable">
-            <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
-            <h4 class="text-center">@Html.Raw(TempData["msgAlertDetails"]).ToString().</h4>
-        </div>
-
-
-    }
-
-    @if (Html.Raw(TempData["msgAlert"]).ToString() == "NotAuthorized")
-    {
-        <div class="modal hide fade" id="loginModalNotAuthorized" role="dialog">
-            <div class="modal-dialog">
-
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title">Login</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-
-                    </div>
-                    <div class="modal-body">
-                        <div class="alert alert-danger alert-dismissable">
-                            <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
-                            <h4 class="text-center">Sorry! You are not an authorized user.</h4>
-                        </div><br />
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-
-
-    }
-</div>
-
 <!-- Modal -->
 <div class="modal fade" id="loginModal" role="dialog">
     <div class="modal-dialog">
@@ -188,8 +143,7 @@
             }
             else
             {
-                <a href="#" class="btn-projects scrollto"><i class="fa fa-shopping-cart"></i> Order Now</a>
-
+                <a href="@Url.Action("NewOrder", "User")" class="btn-projects scrollto"><i class="fa fa-shopping-cart"> </i> Order Now</a>
             }
 
         </div>

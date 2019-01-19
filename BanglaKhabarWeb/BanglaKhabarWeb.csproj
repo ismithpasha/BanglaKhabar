@@ -260,9 +260,10 @@
     <Content Include="Views\Security\Login.cshtml" />
     <Content Include="Views\Shared\_LayoutUser.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
-    <Content Include="Views\User\Profile.cshtml" />
+    <Content Include="Views\User\UserProfile.cshtml" />
     <Content Include="Views\User\MyOrders.cshtml" />
     <Content Include="Views\User\NewOrder.cshtml" />
+    <Content Include="Views\Security\SignUp.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

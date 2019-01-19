@@ -2,59 +2,14 @@
     ViewBag.Title = "Home Page";
 }
 
-
-<div class="col-sm-4 col-sm-offset-4">
-
-    @if (Html.Raw(TempData["msgAlert"]).ToString() == "N")
-    {
-        <div class="alert alert-warning alert-dismissable">
-            <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
-            <h4 class="text-center">@Html.Raw(TempData["msgAlertDetails"]).ToString().</h4>
-        </div>
-
-
-    }
-
-    @if (Html.Raw(TempData["msgAlert"]).ToString() == "NotAuthorized")
-    {
-        <div class="modal hide fade" id="loginModalNotAuthorized" role="dialog">
-            <div class="modal-dialog">
-
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title">Login</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-
-                    </div>
-                    <div class="modal-body">
-                        <div class="alert alert-danger alert-dismissable">
-                            <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
-                            <h4 class="text-center">Sorry! You are not an authorized user.</h4>
-                        </div><br />
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-
-
-    }
-</div>
-
 <!-- Modal -->
 <div class="modal fade" id="loginModal" role="dialog">
     <div class="modal-dialog">
 
         <!-- Modal content-->
         <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">Login</h4>
+            <div class="modal-header bg-info ">
+                <h4 class="modal-title text-white">Login</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
 
             </div>
@@ -69,12 +24,12 @@
                         <input type="password" class="form-control" id="Password" name="Password">
                     </div>
 
-                 @*   <button type="submit" class="btn btn-default" style="min-width:150px;">Login</button>*@
-                    <div class="col-sm-12">
+                    <button type="submit" class="btn btn-info" style="min-width:150px;">Login</button>
+                    @*<div class="col-sm-12">
                         <div class="alert alert-info">
                             <h4 class="text-center">Sorry! This feature will be available soon.</h4>
                         </div>
-                    </div>
+                    </div>*@
                 </form>
 
             </div>
@@ -92,24 +47,28 @@
 
         <!-- Modal content-->
         <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">Sign up</h4>
+            <div class="modal-header bg-info ">
+
+                <h3 class="text-center text-white" style="width:100%;">Sign up</h3>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                @*<h4 class="modal-title"></h4>*@
+
 
             </div>
             <div class="modal-body">
-                <form action="" class="row">
+                <form action="@Url.Action("UserSignUp", "Security")" class="row" method="post" role="form">
                     <div class="form-group col-sm-6">
                         <label>First Name: *</label>
-                        <input type="text" class="form-control" id="FirstName" name="FirstName">
+                        <input type="text" class="form-control" id="FirstName" name="FirstName" required>
                     </div>
                     <div class="form-group col-sm-6">
                         <label>Last Name: *</label>
-                        <input type="text" class="form-control" id="LastName" name="LastName">
+                        <input type="text" class="form-control" id="LastName" name="LastName" required>
                     </div>
                     <div class="form-group col-sm-6">
                         <label>Phone: *</label>
-                        <input type="email" class="form-control" id="Phone" name="Phone">
+                        <input type="text" class="form-control" id="Phone" name="Phone">
                     </div>
                     <div class="form-group col-sm-6">
                         <label>Email: *</label>
@@ -131,13 +90,13 @@
                         <label>Gender: *</label>
                         <br />
                         <label class="radio-inline">
-                            <input type="radio" name="Gender" checked> Male
+                            <input type="radio" name="Gender" value="male" checked> Male
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="Gender"> Female
+                            <input type="radio" name="Gender" value="female"> Female
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="Gender"> Other
+                            <input type="radio" name="Gender" value="other"> Other
                         </label>
                     </div>
 
@@ -145,14 +104,11 @@
                         <label>Birth Date: *</label>
                         <input type="date" class="form-control" id="BirthDate" name="BirthDate">
                     </div>
+                    <br />  <br />
+                    <hr />
+                    <div class="col-sm-12  text-center">
+                        <button type="submit" class="btn btn-info" style="min-width:150px;">Sign up</button>
 
-                    <div class="form-group col-sm-12">
-                        @*   <button type="submit" class="btn btn-default" style="min-width:150px;">Sign up</button>*@
-                        <div class="col-sm-12">
-                            <div class="alert alert-info">
-                                <h4 class="text-center">Sorry! This feature will be available soon.</h4>
-                            </div>
-                        </div>
                     </div>
                 </form>
 
@@ -187,8 +143,7 @@
             }
             else
             {
-                <a href="#" class="btn-projects scrollto"><i class="fa fa-shopping-cart"></i> Order Now</a>
-
+                <a href="@Url.Action("NewOrder", "User")" class="btn-projects scrollto"><i class="fa fa-shopping-cart"> </i> Order Now</a>
             }
 
         </div>

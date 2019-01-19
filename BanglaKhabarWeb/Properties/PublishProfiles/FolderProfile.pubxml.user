@@ -22,10 +22,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/16/2019 01:19:12</publishTime>
     </File>
     <File Include="bin/BanglaKhabarWeb.dll">
-      <publishTime>01/18/2019 04:21:29</publishTime>
+      <publishTime>01/20/2019 02:36:06</publishTime>
     </File>
     <File Include="bin/BanglaKhabarWeb.pdb">
-      <publishTime>01/18/2019 04:21:29</publishTime>
+      <publishTime>01/20/2019 02:36:06</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
       <publishTime>01/16/2019 01:19:13</publishTime>
@@ -475,7 +475,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/16/2019 01:19:12</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>01/18/2019 04:21:03</publishTime>
+      <publishTime>01/20/2019 02:10:52</publishTime>
+    </File>
+    <File Include="Views/Security/Login.cshtml">
+      <publishTime>01/20/2019 02:16:28</publishTime>
+    </File>
+    <File Include="Views/Security/SignUp.cshtml">
+      <publishTime>01/20/2019 02:16:52</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>01/16/2019 01:19:12</publishTime>
@@ -484,7 +490,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/16/2019 01:19:12</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>01/16/2019 01:19:12</publishTime>
+      <publishTime>01/20/2019 01:34:07</publishTime>
+    </File>
+    <File Include="Views/Shared/_LayoutSecurity.cshtml">
+      <publishTime>01/20/2019 02:08:37</publishTime>
+    </File>
+    <File Include="Views/Shared/_LayoutUser.cshtml">
+      <publishTime>01/20/2019 02:00:51</publishTime>
+    </File>
+    <File Include="Views/User/Index.cshtml">
+      <publishTime>01/20/2019 01:54:38</publishTime>
+    </File>
+    <File Include="Views/User/MyOrders.cshtml">
+      <publishTime>01/20/2019 01:54:28</publishTime>
+    </File>
+    <File Include="Views/User/NewOrder.cshtml">
+      <publishTime>01/20/2019 01:54:44</publishTime>
+    </File>
+    <File Include="Views/User/UserProfile.cshtml">
+      <publishTime>01/20/2019 01:54:51</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>01/16/2019 01:19:12</publishTime>

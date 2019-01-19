@@ -83,8 +83,9 @@
                             <a href="#"><i class="fa fa-user-circle"> </i> @Session["SessionUserFullName"].ToString()</a>
                             <ul>
                                 @*   <li class="fa fa-sign-out">@Html.ActionLink("Logout", "Logout", "Security")</li>*@
-                                <li><a href="@Url.Action("Logout", "Security")"><i class="fa fa-user"> </i> Profile</a></li>
-                                <li><a href="@Url.Action("Logout", "Security")"><i class="fa fa-shopping-cart"> </i> Order Now</a></li>
+                                <li><a href="@Url.Action("UserProfile", "User")"><i class="fa fa-user"> </i> Profile</a></li>
+                                <li><a href="@Url.Action("NewOrder", "User")"><i class="fa fa-shopping-cart"> </i> Order Now</a></li>
+                                <li><a href="@Url.Action("MyOrders", "User")"><i class="fa fa-shopping-cart"> </i> My Orders</a></li>
                                 <li><a href="@Url.Action("Logout", "Security")"><i class="fa fa-sign-out"> </i> Logout</a></li>
                             </ul>
                         </li>
