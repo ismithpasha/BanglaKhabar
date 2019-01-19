@@ -53,8 +53,8 @@
 
         <!-- Modal content-->
         <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">Login</h4>
+            <div class="modal-header bg-info ">
+                <h4 class="modal-title text-white">Login</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
 
             </div>
@@ -69,7 +69,12 @@
                         <input type="password" class="form-control" id="Password" name="Password">
                     </div>
 
-                    <button type="submit" class="btn btn-default" style="min-width:150px;">Login</button>
+                    <button type="submit" class="btn btn-info" style="min-width:150px;">Login</button>
+                    @*<div class="col-sm-12">
+                        <div class="alert alert-info">
+                            <h4 class="text-center">Sorry! This feature will be available soon.</h4>
+                        </div>
+                    </div>*@
                 </form>
 
             </div>
@@ -87,24 +92,28 @@
 
         <!-- Modal content-->
         <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">Sign up</h4>
+            <div class="modal-header bg-info ">
+
+                <h3 class="text-center text-white" style="width:100%;">Sign up</h3>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                @*<h4 class="modal-title"></h4>*@
+
 
             </div>
             <div class="modal-body">
-                <form action="" class="row">
+                <form action="@Url.Action("UserSignUp", "Security")" class="row" method="post" role="form">
                     <div class="form-group col-sm-6">
                         <label>First Name: *</label>
-                        <input type="text" class="form-control" id="FirstName" name="FirstName">
+                        <input type="text" class="form-control" id="FirstName" name="FirstName" required>
                     </div>
                     <div class="form-group col-sm-6">
                         <label>Last Name: *</label>
-                        <input type="text" class="form-control" id="LastName" name="LastName">
+                        <input type="text" class="form-control" id="LastName" name="LastName" required>
                     </div>
                     <div class="form-group col-sm-6">
                         <label>Phone: *</label>
-                        <input type="email" class="form-control" id="Phone" name="Phone">
+                        <input type="text" class="form-control" id="Phone" name="Phone">
                     </div>
                     <div class="form-group col-sm-6">
                         <label>Email: *</label>
@@ -126,13 +135,13 @@
                         <label>Gender: *</label>
                         <br />
                         <label class="radio-inline">
-                            <input type="radio" name="Gender" checked> Male
+                            <input type="radio" name="Gender" value="male" checked> Male
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="Gender"> Female
+                            <input type="radio" name="Gender" value="female"> Female
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="Gender"> Other
+                            <input type="radio" name="Gender" value="other"> Other
                         </label>
                     </div>
 
@@ -140,9 +149,11 @@
                         <label>Birth Date: *</label>
                         <input type="date" class="form-control" id="BirthDate" name="BirthDate">
                     </div>
+                    <br />  <br />
+                    <hr />
+                    <div class="col-sm-12  text-center">
+                        <button type="submit" class="btn btn-info" style="min-width:150px;">Sign up</button>
 
-                    <div class="form-group col-sm-12">
-                        <button type="submit" class="btn btn-default" style="min-width:150px;">Sign up</button>
                     </div>
                 </form>
 
@@ -164,6 +175,9 @@
         <h3 class="text-info">
             আপনার আস্থাই আমাদের সম্পদ
         </h3>
+        <h4 class="text-warning">
+            অতি শীঘ্রই আমাদের আমাদের অনলাইন সেবা চালু হতে চলছে
+        </h4>
         <div>
             <a href="~/Content/Files/bk_menu.pdf" class="btn btn-get-started scrollto" download=""><i class="fa fa-download"></i> Our Menu</a>
 
@@ -224,7 +238,7 @@
 
                 <div class="col-lg-8 content">
                     <h2>ABOUT US</h2>
-                    <h3>Bangla Khabar provides lunch boxes. We are very fast lunch delivered in the Dhaka city. We are always maintain good quality and healthy food. Our mission is to provide the best quality nutritious food at a very reasonable price. Our main service focus is to provide food delivery in the field of Bank, Telecommunication sector, Financial sectors, Government sectors and large Multinational and Manufacturing enterprise. We will save time & Hassle free of each individual or corporate job holder. Our target use less people’s will be make a good career by Bangla Khabar.</h3>
+                    <p>Bangla Khabar provides lunch boxes. We delivered lunch very fast in the Dhaka city. We always maintain good quality and healthy food. Our mission is to provide the best quality nutritious food at a very reasonable price. Our main service focus is to provide food delivery in the field of Bank, Telecommunication sector, Financial sectors, Government sectors and large Multinational and Manufacturing enterprise. We will save time & Hassle free of each individual or corporate job holder. Our target use less people’s will be make a good career by Bangla Khabar.</p>
                     <hr />
                     <p><b>We Provide:</b></p>
                     <ul>

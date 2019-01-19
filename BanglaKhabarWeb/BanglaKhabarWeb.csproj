@@ -150,14 +150,19 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SecurityController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ResponseModels\ResponseMessage.cs" />
     <Compile Include="Models\SecurityModels\LoginEntity.cs" />
+    <Compile Include="Models\SecurityModels\SignUpEntity.cs" />
     <Compile Include="Models\UserModels\UserInfo.cs" />
     <Compile Include="NetworkModels\ApiRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Shared\Controllers\HomeController.cs" />
+    <Compile Include="Views\Shared\Controllers\SecurityController.cs" />
+    <Compile Include="Views\Shared\Controllers\UserController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\css\scss-files.txt" />
@@ -254,10 +259,16 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_Layout - Copy.cshtml" />
+    <Content Include="Views\Shared\_LayoutSecurity.cshtml" />
+    <Content Include="Views\Security\Login.cshtml" />
+    <Content Include="Views\Shared\_LayoutUser.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\Profile.cshtml" />
+    <Content Include="Views\User\MyOrders.cshtml" />
+    <Content Include="Views\User\NewOrder.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Security\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
