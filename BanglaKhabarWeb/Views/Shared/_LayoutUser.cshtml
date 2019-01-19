@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Bangla Khabar | বাংলা খাবার</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicons -->
+    <link href="~/Content/Images/Web/logo.png" rel="icon">
+    <link href="~/Content/Images/Web/logo.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
+
+    <!-- Bootstrap CSS File -->
+    <link href="~/Content/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Libraries CSS Files -->
+    <link href="~/Content/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/Content/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="~/Content/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="~/Content/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="~/Content/lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <link href="~/Content/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+
+</head>
+
+<body id="body">
+
+    <!--==========================
+      Top Bar
+    ============================-->
+    <section id="topbar" class="d-none d-lg-block">
+        <div class="container clearfix">
+            <div class="contact-info float-left">
+                <i class="fa fa-envelope-o"></i> <a href="mailto:info.banglakhabar@gmail.com">info.banglakhabar@gmail.com</a>
+                <i class="fa fa-phone"></i> 01642-273733
+                <i class="fa fa-phone"></i> 01642-273424
+            </div>
+            <div class="social-links float-right">
+                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.facebook.com/banglakhabar4u/" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+                <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!--==========================
+      Header
+    ============================-->
+    <header id="header">
+        <div class="container">
+
+            <div id="logo" class="pull-left">
+                <!--  <h1><a href="#body" class="scrollto">Reve<span>al</span></a></h1>-->
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <a href="#body"><img src="~/Content/Images/Web/logo.png" alt="" title="" style="height:50px; float:left;" /> <h2 style="float:left; margin-top:8px; margin-bottom:auto; margin-left:8px; "> <b class="text-danger"> বাংলা</b>  <b class="text-success">খাবার</b> </h2></a>
+            </div>
+
+            <nav id="nav-menu-container">
+                <ul class="nav-menu">
+
+                    @if (Session["SessionUserEmail"] == null)
+                    {
+                        Response.Redirect("~/Home/Index");
+                    }
+                    else
+                    {
+                        <li><a href="@Url.Action("Index", "Home")"><i class="fa fa-home"> </i> Home</a></li>
+                        
+                        <li><a href="@Url.Action("Logout", "User")"><i class="fa fa-shopping-cart"> </i> Order Now</a></li>
+                        <li class="menu-has-children">
+                            <a href="#"><i class="fa fa-user-circle"> </i> @Session["SessionUserFullName"].ToString()</a>
+                            <ul>
+                                <li><a href="@Url.Action("Logout", "User")"><i class="fa fa-user"> </i> Profile</a></li>
+                                <li><a href="@Url.Action("Logout", "Security")"><i class="fa fa-sign-out"> </i> Logout</a></li>
+                            </ul>
+                        </li>
+
+                    }
+
+                </ul>
+            </nav><!-- #nav-menu-container -->
+        </div>
+    </header><!-- #header -->
+
+    @RenderBody()
+
+
+    <!--==========================
+      Footer
+    ============================-->
+    <style>
+        .footerSecurity {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <footer id="footer" class="footerSecurity">
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><b class="text-danger"> বাংলা</b>  <b class="text-success">খাবার</b></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+
+                Developed by <a href="https://ismithpasha.com/" target="_blank"> <b>Ismith Pasha</b></a>
+            </div>
+        </div>
+    </footer><!-- #footer -->
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="~/Content/lib/jquery/jquery.min.js"></script>
+    <script src="~/Content/lib/jquery/jquery.min.js"></script>
+    <script src="~/Content/lib/jquery/jquery-migrate.min.js"></script>
+    <script src="~/Content/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Content/lib/easing/easing.min.js"></script>
+    <script src="~/Content/lib/superfish/hoverIntent.js"></script>
+    <script src="~/Content/lib/superfish/superfish.min.js"></script>
+    <script src="~/Content/lib/wow/wow.min.js"></script>
+    <script src="~/Content/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="~/Content/lib/magnific-popup/magnific-popup.min.js"></script>
+    <script src="~/Content/lib/sticky/sticky.js"></script>
+
+    <!-- Contact Form JavaScript File -->
+    <script src="~/Content/contactform/contactform.js"></script>
+
+    <!-- Template Main Javascript File -->
+    <script src="~/Content/js/main.js"></script>
+
+</body>
+</html>
