@@ -16,3 +16,14 @@ D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\A
 D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\ApiManager\obj\Release\ApiManager.pdb
 D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\ApiManager\bin\Release\DbManager.dll
 D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\ApiManager\bin\Release\DbManager.pdb
+D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\BanglaKhabar\ApiManager\bin\Release\ApiManager.dll
+D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\BanglaKhabar\ApiManager\bin\Release\ApiManager.pdb
+D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\BanglaKhabar\ApiManager\bin\Release\DbManager.dll
+D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\BanglaKhabar\ApiManager\bin\Release\Newtonsoft.Json.dll
+D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\BanglaKhabar\ApiManager\bin\Release\DbManager.pdb
+D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\BanglaKhabar\ApiManager\bin\Release\Newtonsoft.Json.xml
+D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\BanglaKhabar\ApiManager\obj\Release\ApiManager.csprojAssemblyReference.cache
+D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\BanglaKhabar\ApiManager\obj\Release\ApiManager.csproj.CoreCompileInputs.cache
+D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\BanglaKhabar\ApiManager\obj\Release\ApiManager.csproj.CopyComplete
+D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\BanglaKhabar\ApiManager\obj\Release\ApiManager.dll
+D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\BanglaKhabar\ApiManager\obj\Release\ApiManager.pdb

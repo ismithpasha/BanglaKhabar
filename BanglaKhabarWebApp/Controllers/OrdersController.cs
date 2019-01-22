@@ -238,6 +238,75 @@ namespace BanglaKhabarWebApp.Controllers
             return rM;
         }
 
+        [HttpPost]
+        [Route("GetOrderListByUser")]
+        public ResponseMessage GetOrderListByUser(ParameterUserBasic obj)
+        {
+             
+            string reply = string.Empty;
+            ResponseMessage rM = new ResponseMessage();
+            List<OrderInfo> orderList = new List<OrderInfo>();
+
+            try
+            {
+                var dt = apiRepository.GetOrderListByUser(obj.UserId.Trim(), ref reply);
+                if (dt != null && dt.Rows.Count > 0)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        OrderInfo orderInfo = new OrderInfo();
+                        orderInfo.OrderId = dr["OrderId"].ToString().Trim();
+                        orderInfo.MenuId = dr["MenuId"].ToString().Trim();
+                        orderInfo.CustomerId = dr["CustomerId"].ToString().Trim();
+                        orderInfo.TitleBn = dr["TitleBn"].ToString().Trim();
+                        orderInfo.TitleEn = dr["TitleEn"].ToString().Trim();
+                        orderInfo.DescriptionBn = dr["DescriptionBn"].ToString().Trim();
+                        orderInfo.DescriptionEn = dr["DescriptionEn"].ToString().Trim();
+                        orderInfo.RegularPrice = dr["RegularPrice"].ToString().Trim();
+                        orderInfo.Discount = dr["Discount"].ToString().Trim();
+                        double price = (Convert.ToDouble(orderInfo.RegularPrice) - (Convert.ToDouble(orderInfo.RegularPrice) * Convert.ToDouble(orderInfo.Discount) / 100));
+                        orderInfo.Price = price.ToString();
+                        orderInfo.Image = dr["Image"].ToString().Trim();
+                        orderInfo.OrderTime = dr["OrderTime"].ToString().Trim();
+                        orderInfo.DeleveryDate = dr["DeleveryDate"].ToString().Trim();
+                        orderInfo.DeleveryDayName = dr["DeleveryDayName"].ToString().Trim();
+                        orderInfo.Quantity = dr["Quantity"].ToString().Trim();
+                        orderInfo.AddressId = dr["AddressId"].ToString().Trim();
+                        orderInfo.DeleveryAddress = dr["DeleveryAddress"].ToString().Trim();
+                        orderInfo.ReceiverName = dr["ReceiverName"].ToString().Trim();
+                        orderInfo.UserRemarks = dr["UserRemarks"].ToString().Trim();
+                        orderInfo.AdminRemarks = dr["AdminRemarks"].ToString().Trim();
+                        orderInfo.OrderStatus = dr["OrderStatus"].ToString().Trim();
+                        orderInfo.UserStatus = dr["UserStatus"].ToString().Trim();
+                        orderList.Add(orderInfo);
+                    }
+                    rM.MessageCode = "Y";
+                    rM.Message = "";
+                    rM.SystemMessage = reply;
+                    rM.Content = orderList;
+                }
+                else
+                {
+                    rM.MessageCode = "N";
+                    rM.Message = "No order found.";
+                    rM.SystemMessage = reply;
+                    rM.Content = orderList;
+                }
+                return rM;
+            }
+            catch (Exception ex)
+            {
+                rM.MessageCode = "N";
+                rM.Message = "System Error";
+                rM.SystemMessage = ex.Message;
+                rM.Content = orderList;
+                return rM;
+            }
+
+
+            return rM;
+        }
+
 
         [HttpPost]
         [Route("PlaceOrder")]

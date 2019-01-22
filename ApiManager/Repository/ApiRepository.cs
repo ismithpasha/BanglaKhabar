@@ -328,6 +328,25 @@ namespace ApiManager.Repository
             }
             return dTable;
         }
+        public DataTable GetOrderListByUser(string UserId, ref string replay)
+        {
+            string msg_code = string.Empty;
+            string msg = string.Empty;
+            DataTable dTable = new DataTable();
+            try
+            {
+
+                objSqlProcManager = new SqlProcedureManager(connectionString);
+                dTable = objSqlProcManager.ExecuteDataTable("sp_Get_Orders_By_UserId", ref replay,
+                    UserId);
+
+            }
+            catch (Exception errorException)
+            {
+                throw errorException;
+            }
+            return dTable;
+        }
 
         public string[] PlaceCustomerOrder(PlaceCustomerOrder objOrder, ref string replay) 
         {

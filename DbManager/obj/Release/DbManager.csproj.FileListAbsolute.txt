@@ -27,3 +27,9 @@ D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\D
 D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\DbManager\obj\Release\DbManager.csproj.CoreCompileInputs.cache
 D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\DbManager\obj\Release\DbManager.dll
 D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\DbManager\obj\Release\DbManager.pdb
+D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\BanglaKhabar\DbManager\bin\Release\DbManager.dll
+D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\BanglaKhabar\DbManager\bin\Release\DbManager.pdb
+D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\BanglaKhabar\DbManager\obj\Release\DbManager.csprojAssemblyReference.cache
+D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\BanglaKhabar\DbManager\obj\Release\DbManager.csproj.CoreCompileInputs.cache
+D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\BanglaKhabar\DbManager\obj\Release\DbManager.dll
+D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\BanglaKhabar\DbManager\obj\Release\DbManager.pdb

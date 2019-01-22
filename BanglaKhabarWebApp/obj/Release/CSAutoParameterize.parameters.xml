@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters>
-  <parameter name="BkConnection-Web.config Connection String" description="BkConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=DESKTOP-SKAOFLJ;Initial Catalog=BanglaKhabar;uid=sa;password=Asdf@123;" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="D:\\DEVELOPMENT\\Projects\\BanglaKhabar\\WebAPI\\BanglaKhabarWeb\\BanglaKhabarWebApp\\BanglaKhabarWebApp\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='BkConnection']/@connectionString" />
-  </parameter>
-</parameters>
