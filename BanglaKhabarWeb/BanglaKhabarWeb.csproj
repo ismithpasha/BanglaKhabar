@@ -164,6 +164,10 @@
   <ItemGroup>
     <Content Include="Content\css\scss-files.txt" />
     <Content Include="Content\css\style.css" />
+    <Content Include="Content\Images\Menu\monday.jpg" />
+    <Content Include="Content\Images\Menu\sunday.jpg" />
+    <Content Include="Content\Images\Menu\thursday.jpg" />
+    <Content Include="Content\Images\Menu\tuesday.jpg" />
     <Content Include="Content\Images\Web\BK_Back.jpg" />
     <Content Include="Content\Images\Web\BK_Front.jpg" />
     <Content Include="Content\Images\Web\logo.png" />

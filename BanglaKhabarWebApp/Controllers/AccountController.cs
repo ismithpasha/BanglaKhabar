@@ -206,6 +206,66 @@ namespace BanglaKhabarWebApp.Controllers
             return rM;
         }
 
+        [HttpPost]
+        [Route("GetAllAdmins")]
+        public ResponseMessage GetAllAdmins(ParameterUserBasic objId)
+        {
+            string id = objId.UserId.Trim();
+
+            string reply = string.Empty;
+            ResponseMessage rM = new ResponseMessage();
+            List<UserInformation> userInfoList = new List<UserInformation>();
+
+            try
+            {
+                var dt = apiRepository.GetAllAdmins(ref reply);
+                if (dt != null && dt.Rows.Count > 0)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        UserInformation userInfo = new UserInformation();
+
+                        userInfo.UserId = dr["UserId"].ToString();
+                        userInfo.FirstName = dr["FirstName"].ToString();
+                        userInfo.LastName = dr["LastName"].ToString();
+                        userInfo.NickName = dr["NickName"].ToString();
+                        userInfo.FullName = dr["FirstName"].ToString() + " " + dr["LastName"].ToString() + " (" + dr["NickName"].ToString() + ") ";
+                        userInfo.BirthDate = dr["BirthDate"].ToString();
+                        userInfo.Gender = dr["Gender"].ToString();
+                        userInfo.Email = dr["Email"].ToString();
+                        userInfo.Phone = dr["Phone"].ToString();
+                        userInfo.UserType = dr["UserType"].ToString();
+                        userInfo.UserStatus = dr["UserStatus"].ToString();
+
+                        userInfoList.Add(userInfo);
+
+                    }
+                    rM.MessageCode = "Y";
+                    rM.Message = "";
+                    rM.SystemMessage = reply;
+                    rM.Content = userInfoList;
+                }
+                else
+                {
+                    rM.MessageCode = "N";
+                    rM.Message = "No notice found.";
+                    rM.SystemMessage = reply;
+                    rM.Content = userInfoList;
+                }
+                return rM;
+            }
+            catch (Exception ex)
+            {
+                rM.MessageCode = "N";
+                rM.Message = "System Error";
+                rM.SystemMessage = ex.Message;
+                rM.Content = userInfoList;
+                return rM;
+            }
+
+
+            return rM;
+        }
 
     }
 }

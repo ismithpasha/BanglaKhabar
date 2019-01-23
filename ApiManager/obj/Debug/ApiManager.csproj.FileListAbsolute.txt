@@ -38,3 +38,14 @@ D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\B
 D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\BanglaKhabar\ApiManager\obj\Debug\ApiManager.csproj.CopyComplete
 D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\BanglaKhabar\ApiManager\obj\Debug\ApiManager.dll
 D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\BanglaKhabar\ApiManager\obj\Debug\ApiManager.pdb
+E:\IsmithPasha\BanglaKhabar\DotNetApp\BanglaKhabar\ApiManager\bin\Debug\ApiManager.dll
+E:\IsmithPasha\BanglaKhabar\DotNetApp\BanglaKhabar\ApiManager\bin\Debug\ApiManager.pdb
+E:\IsmithPasha\BanglaKhabar\DotNetApp\BanglaKhabar\ApiManager\bin\Debug\DbManager.dll
+E:\IsmithPasha\BanglaKhabar\DotNetApp\BanglaKhabar\ApiManager\bin\Debug\Newtonsoft.Json.dll
+E:\IsmithPasha\BanglaKhabar\DotNetApp\BanglaKhabar\ApiManager\bin\Debug\DbManager.pdb
+E:\IsmithPasha\BanglaKhabar\DotNetApp\BanglaKhabar\ApiManager\bin\Debug\Newtonsoft.Json.xml
+E:\IsmithPasha\BanglaKhabar\DotNetApp\BanglaKhabar\ApiManager\obj\Debug\ApiManager.csprojAssemblyReference.cache
+E:\IsmithPasha\BanglaKhabar\DotNetApp\BanglaKhabar\ApiManager\obj\Debug\ApiManager.csproj.CoreCompileInputs.cache
+E:\IsmithPasha\BanglaKhabar\DotNetApp\BanglaKhabar\ApiManager\obj\Debug\ApiManager.csproj.CopyComplete
+E:\IsmithPasha\BanglaKhabar\DotNetApp\BanglaKhabar\ApiManager\obj\Debug\ApiManager.dll
+E:\IsmithPasha\BanglaKhabar\DotNetApp\BanglaKhabar\ApiManager\obj\Debug\ApiManager.pdb

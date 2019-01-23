@@ -139,7 +139,7 @@ namespace BanglaKhabarWebApp.Controllers
 
         [HttpPost]
         [Route("GetMenuInfo")]
-        public ResponseMessage GetMenuDetails(ParameterMenuDetails obj)
+        public ResponseMessage GetMenuInfo(ParameterMenuDetails obj)
         {
 
             string reply = string.Empty;
@@ -164,6 +164,60 @@ namespace BanglaKhabarWebApp.Controllers
                         menu.MenuStatus = dt.Rows[0]["MenuStatus"].ToString().Trim();
 
                        
+                    rM.MessageCode = "Y";
+                    rM.Message = "";
+                    rM.SystemMessage = reply;
+                    rM.Content = menu;
+                }
+                else
+                {
+                    rM.MessageCode = "N";
+                    rM.Message = "No menu found.";
+                    rM.SystemMessage = reply;
+                    rM.Content = menu;
+                }
+                return rM;
+            }
+            catch (Exception ex)
+            {
+                rM.MessageCode = "N";
+                rM.Message = "System Error";
+                rM.SystemMessage = ex.Message;
+                rM.Content = menu;
+                return rM;
+            }
+
+
+            return rM;
+        }
+
+        [HttpPost]
+        [Route("GetMenuDetails")]
+        public ResponseMessage GetMenuItemDetails(ParameterMenuDetails obj)
+        {
+
+            string reply = string.Empty;
+            ResponseMessage rM = new ResponseMessage();
+            MenuItems menu = new MenuItems();
+            try
+            {
+                var dt = apiRepository.GetMenuItemDetails(obj.DayName.Trim(), ref reply);
+
+                if (dt != null && dt.Rows.Count > 0)
+                {
+
+                    menu.MenuId = dt.Rows[0]["MenuId"].ToString().Trim();
+                    menu.TitleBn = dt.Rows[0]["TitleBn"].ToString().Trim();
+                    menu.TitleEn = dt.Rows[0]["TitleEn"].ToString().Trim();
+                    menu.DescriptionBn = dt.Rows[0]["DescriptionBn"].ToString().Trim();
+                    menu.DescriptionEn = dt.Rows[0]["DescriptionEn"].ToString().Trim();
+                    menu.Tag = dt.Rows[0]["Tag"].ToString().Trim();
+                    menu.RegularPrice = dt.Rows[0]["RegularPrice"].ToString().Trim();
+                    menu.Discount = dt.Rows[0]["Discount"].ToString().Trim();
+                    menu.Image = dt.Rows[0]["Image"].ToString().Trim();
+                    menu.MenuStatus = dt.Rows[0]["MenuStatus"].ToString().Trim();
+
+
                     rM.MessageCode = "Y";
                     rM.Message = "";
                     rM.SystemMessage = reply;

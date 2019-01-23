@@ -260,6 +260,26 @@ namespace ApiManager.Repository
             }
             return dTable;
         }
+         public DataTable GetAllAdmins(ref string replay)
+                {
+                    string msg_code = string.Empty;
+                    string msg = string.Empty;
+                    DataTable dTable = new DataTable();
+                    try
+                    {
+
+                        objSqlProcManager = new SqlProcedureManager(connectionString);
+                        dTable = objSqlProcManager.ExecuteDataTable("sp_Get_All_Admins", ref replay
+                           );
+
+
+                    }
+                    catch (Exception errorException)
+                    {
+                        throw errorException;
+                    }
+                    return dTable;
+                }
 
         public DataTable GetMenuItems(ref string replay)
         {
@@ -328,6 +348,28 @@ namespace ApiManager.Repository
             }
             return dTable;
         }
+
+        public DataTable GetMenuItemDetails(string dayName, ref string replay)
+        { 
+            string msg_code = string.Empty;
+            string msg = string.Empty;
+            DataTable dTable = new DataTable();
+            try
+            {
+
+                objSqlProcManager = new SqlProcedureManager(connectionString);
+                dTable = objSqlProcManager.ExecuteDataTable("sp_Get_MenuItemDetails_By_Day_Tag", ref replay,
+                    dayName
+                   );
+
+            }
+            catch (Exception errorException)
+            {
+                throw errorException;
+            }
+            return dTable;
+        }
+
         public DataTable GetOrderListByUser(string UserId, ref string replay)
         {
             string msg_code = string.Empty;
