@@ -239,6 +239,26 @@ namespace ApiManager.Repository
             }
             return dTable;
         }
+          public DataTable GetAddressInfo(string userId,string addressId, ref string replay)
+                {
+                    string msg_code = string.Empty;
+                    string msg = string.Empty;
+                    DataTable dTable = new DataTable();
+                    try
+                    {
+
+                        objSqlProcManager = new SqlProcedureManager(connectionString);
+                        dTable = objSqlProcManager.ExecuteDataTable("sp_Get_Addreess_ById", ref replay,
+                            userId,
+                            addressId);
+
+                    }
+                    catch (Exception errorException)
+                    {
+                        throw errorException;
+                    }
+                    return dTable;
+                }
 
         public DataTable GetAllUsers(ref string replay)
         {

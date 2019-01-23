@@ -154,6 +154,63 @@ namespace BanglaKhabarWebApp.Controllers
         }
 
         [HttpPost]
+        [Route("GetAddressInfo")]
+        public ResponseMessage GetAddressInfo(ParameterUserBasic obj)
+        {
+
+            string reply = string.Empty;
+            ResponseMessage rM = new ResponseMessage();
+            UserAddress address = new UserAddress();
+
+            try
+            {
+                var dt = apiRepository.GetAddressInfo(obj.UserId.Trim(), obj.TerminalId.Trim(), ref reply);
+                if (dt != null && dt.Rows.Count > 0)
+                {
+
+                    address = new UserAddress();
+
+                    address.AddressId = dt.Rows[0]["AddressId"].ToString().Trim();
+                    address.UserId = dt.Rows[0]["UserId"].ToString().Trim();
+                    address.AddressTitle = dt.Rows[0]["AddressTitle"].ToString().Trim();
+                    address.StreetAddress = dt.Rows[0]["StreetAddress"].ToString().Trim();
+                    address.City = dt.Rows[0]["City"].ToString().Trim();
+                    address.PostCode = dt.Rows[0]["PostCode"].ToString().Trim();
+                    address.Country = dt.Rows[0]["Country"].ToString().Trim();
+                    address.Latitude = dt.Rows[0]["Latitude"].ToString().Trim();
+                    address.Longitude = dt.Rows[0]["Longitude"].ToString().Trim();
+                    address.AddressStatus = dt.Rows[0]["AddressStatus"].ToString().Trim();
+
+                    
+                
+                rM.MessageCode = "Y";
+                rM.Message = "";
+                rM.SystemMessage = reply;
+                rM.Content = address;
+            }
+                else
+                {
+                    rM.MessageCode = "N";
+                    rM.Message = "No address found.";
+                    rM.SystemMessage = reply;
+                    rM.Content = address;
+                }
+                return rM;
+            }
+            catch (Exception ex)
+            {
+                rM.MessageCode = "N";
+                rM.Message = "System Error";
+                rM.SystemMessage = ex.Message;
+                rM.Content = address;
+                return rM;
+            }
+
+
+            return rM;
+        }
+
+        [HttpPost]
         [Route("GetAddressGroup")]
         public ResponseMessage GetAddressGroup(ParameterUserBasic obj)
         {
