@@ -111,7 +111,66 @@ namespace BanglaKhabarWebApp.Controllers
             return rM;
         }
 
-       
+        [HttpPost]
+        [Route("GetAllNotices")]
+        public ResponseMessage GetAllNotices(UserIdRequestModel objId)
+        {
+            string id = objId.UserId.Trim(); 
+
+            string reply = string.Empty;
+            ResponseMessage rM = new ResponseMessage();
+            List<NoticeInfo> noticeInfoList = new List<NoticeInfo>();
+
+            try
+            {
+                var dt = apiRepository.GetAllNotices( ref reply);
+                if (dt != null && dt.Rows.Count > 0)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        NoticeInfo noticeInfo = new NoticeInfo();
+
+                        noticeInfo.NoticeId = dr["NoticeId"].ToString().Trim();
+                        noticeInfo.PostedBy = dr["PostedByFN"].ToString().Trim() + " " + dr["PostedByLN"].ToString().Trim();
+                        noticeInfo.GroupId = "";
+                        noticeInfo.NoticeTitle = dr["NoticeTitle"].ToString().Trim();
+                        noticeInfo.NoticeDetails = dr["NoticeDetails"].ToString().Trim();
+                        noticeInfo.PostedOn = dr["PostedOn"].ToString().Trim();
+                        noticeInfo.UpdatedOn = dr["UpdatedOn"].ToString().Trim();
+                        noticeInfo.NoticeStatus = "";
+                        noticeInfo.Remarks = dr["NoticeId"].ToString().Trim();
+
+
+                        noticeInfoList.Add(noticeInfo);
+
+                    }
+                    rM.MessageCode = "Y";
+                    rM.Message = "";
+                    rM.SystemMessage = reply;
+                    rM.Content = noticeInfoList;
+                }
+                else
+                {
+                    rM.MessageCode = "N";
+                    rM.Message = "No Notice found.";
+                    rM.SystemMessage = reply;
+                    rM.Content = noticeInfoList;
+                }
+                return rM;
+            }
+            catch (Exception ex)
+            {
+                rM.MessageCode = "N";
+                rM.Message = "System Error";
+                rM.SystemMessage = ex.Message;
+                rM.Content = noticeInfoList;
+                return rM;
+            }
+
+
+            return rM;
+        }
+
 
     }
 }

@@ -509,7 +509,6 @@ namespace ApiManager.Repository
             DataTable dTable = new DataTable();
             try
             {
-
                 objSqlProcManager = new SqlProcedureManager(connectionString);
                 dTable = objSqlProcManager.ExecuteDataTable("sp_Get_My_Messages", ref replay,
                     objChatParameters.SenderId,
@@ -525,6 +524,23 @@ namespace ApiManager.Repository
             return dTable;
         }
 
+        public DataTable GetAllNotices(ref string replay)
+        {
+            string msg_code = string.Empty; 
+            string msg = string.Empty;
+            DataTable dTable = new DataTable();
+            try
+            {
+                objSqlProcManager = new SqlProcedureManager(connectionString);
+                dTable = objSqlProcManager.ExecuteDataTable("sp_Get_All_Notices", ref replay
+                   );
+            }
+            catch (Exception errorException)
+            {
+                throw errorException;
+            }
+            return dTable;
+        }
         #endregion Messages
 
     }
