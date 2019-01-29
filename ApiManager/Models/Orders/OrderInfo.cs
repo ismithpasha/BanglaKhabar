@@ -29,6 +29,8 @@ namespace ApiManager.Models.Orders
         public string UserRemarks { get; set; }
         public string AdminRemarks { get; set; }
         public string OrderStatus { get; set; }
+        public string IsChangeAble { get; set; }  
+
         public string UserStatus { get; set; }
 }
 }

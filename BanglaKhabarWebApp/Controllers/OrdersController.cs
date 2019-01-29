@@ -303,6 +303,15 @@ namespace BanglaKhabarWebApp.Controllers
 
             try
             {
+                TimeZoneInfo timeZoneInfo;
+                DateTime currentDateTime;
+                //Set the time zone information to Central Asia Standard Time
+                timeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById("Central Asia Standard Time");
+                //Get date and time in US Mountain Standard Time 
+                currentDateTime = TimeZoneInfo.ConvertTime(DateTime.Now, timeZoneInfo);
+        
+                
+
                 var dt = apiRepository.GetOrderListByUser(obj.UserId.Trim(), ref reply);
                 if (dt != null && dt.Rows.Count > 0)
                 {
@@ -323,6 +332,17 @@ namespace BanglaKhabarWebApp.Controllers
                         orderInfo.Image = dr["Image"].ToString().Trim();
                         orderInfo.OrderTime = dr["OrderTime"].ToString().Trim();
                         orderInfo.DeleveryDate = dr["DeleveryDate"].ToString().Trim();
+
+                        DateTime orderDate = Convert.ToDateTime(dr["DeleveryDate"].ToString().Trim());
+                        if(currentDateTime<orderDate)
+                        {
+                            orderInfo.IsChangeAble = "Y";
+                        }
+                        else
+                        {
+                            orderInfo.IsChangeAble = "N";
+                        }
+
                         orderInfo.DeleveryDayName = dr["DeleveryDayName"].ToString().Trim();
                         orderInfo.Quantity = dr["Quantity"].ToString().Trim();
                         orderInfo.AddressId = dr["AddressId"].ToString().Trim();
