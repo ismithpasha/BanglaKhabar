@@ -1,0 +1,136 @@
+﻿
+@{
+    ViewBag.Title = "AllOrders";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+
+<div class="container">
+    <br />
+    @using BanglaKhabarAdmin.Models.ViewModels
+
+    @model BanglaKhabarAdmin.Models.ViewModels.AllOrdersViewModel
+
+
+    <div class="row">
+
+        @if (Model != null)
+        {
+          
+                <div style="background-color:#ffffff; height:auto; padding:15px; margin-top:50px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+
+
+                    <h3 class="text-info"> Orders</h3>
+
+
+                    @*<form action="@Url.Action("FindClassRoutine", "Home")" method="post">
+
+
+                        <div class="form-group">
+                            <h4>Day Name:</h4>
+                            <select class="form-control" id="dayName" name="dayName">
+
+                                <option value="0">ALl</option>
+                                <option value="Saturday">Saturday</option>
+                                <option value="Sunday">Sunday</option>
+                                <option value="Monday">Monday</option>
+                                <option value="Tuesday">Tuesday</option>
+                                <option value="Wednesday">Wednesday</option>
+                                <option value="Wednesday">Wednesday</option>
+
+                            </select>
+                        </div>
+
+                     
+
+                        <div class="form-group">
+                            <button type="submit" id="btnSubmit" class="btn btn-primary col-sm-4">Search</button>
+                            <div class="col-sm-8">
+                            </div>
+                        </div>
+                        <br /><br />
+                    </form>*@
+
+                    <br />
+                    <hr />
+
+
+                    @if (Model.OrderList != null)
+                    {
+                        <table class="table table-bordered table-responsive">
+                            <thead>
+                                <tr>
+                                    <th>OrderId</th>
+                                    <th>Title 
+                                    <th>Description</th>
+                                    <th>Price</th>                                   
+                                    <th>Order Time</th>
+                                    <th>Delevery Date</th>
+                                    <th>Quantity</th>
+                                    <th>Delevery Address</th>
+                                    <th>Receiver Name</th>
+                                    <th>User Remarks</th>
+                                    <th>Admin Remarks</th>
+                                    <th>Order Status</th>
+                                    <th>IsChangeAble</th>
+                                    <th>User Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.OrderList)
+                                {
+                                <tr>
+                                    <td>@item.OrderId</td>
+                                   
+                                    <td>@item.TitleBn <br /> @item.TitleEn</td>
+                                    <td>@item.DescriptionBn <br /> @item.DescriptionEn</td>
+                                    <td> <p>Regular Price: @item.RegularPrice /- Taka, </p> <p> Discount: @item.Discount %,</p><p>Price: @item.Price /- Taka</p></td>
+                                    
+                                    <td>@item.OrderTime</td>
+                                    <td>@item.DeleveryDate - @item.DeleveryDayName</td>
+                                    <td>@item.Quantity</td>
+                                    <td>@item.DeleveryAddress</td>
+                                    <td>@item.ReceiverName</td>
+                                    <td>@item.UserRemarks</td>
+                                    <td>@item.AdminRemarks</td>
+                                    <td>@item.OrderStatus</td>
+                                    <td>@item.IsChangeAble</td>
+
+                                    <td>@item.UserStatus</td>
+
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+
+                    }
+
+
+                </div>
+           
+        }
+        else
+        {
+            <br />
+            <div class="col-sm-6 col-sm-offset-3">
+                <div style="background-color:#ffffff; padding:15px; margin-top:50px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+
+
+                    @if (Html.Raw(TempData["msgAlert"]).ToString() == "N")
+                    {
+                        <div class="alert alert-warning alert-dismissable col-sm-12">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                            <h4 class="text-center">@Html.Raw(TempData["msgAlertDetails"]).ToString().</h4>
+                        </div>
+                        <br />
+                        // handle refreshing the view, or redirect to another View (window.location.href = "")
+                    }
+
+                </div>
+            </div>
+        }
+    </div>
+
+</div>
+

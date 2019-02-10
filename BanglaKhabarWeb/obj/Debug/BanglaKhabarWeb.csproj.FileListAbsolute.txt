@@ -461,7 +461,6 @@ D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\B
 D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\BanglaKhabar\BanglaKhabarWeb\obj\Debug\BanglaKhabarWeb.csproj.CopyComplete
 D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\BanglaKhabar\BanglaKhabarWeb\obj\Debug\BanglaKhabarWeb.dll
 D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\BanglaKhabar\BanglaKhabarWeb\obj\Debug\BanglaKhabarWeb.pdb
-D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\BanglaKhabar\BanglaKhabarWeb\obj\Debug\BanglaKhabarWeb.csprojAssemblyReference.cache
 E:\IsmithPasha\BanglaKhabar\DotNetApp\BanglaKhabar\BanglaKhabarWeb\bin\ApplicationInsights.config
 E:\IsmithPasha\BanglaKhabar\DotNetApp\BanglaKhabar\BanglaKhabarWeb\bin\BanglaKhabarWeb.dll.config
 E:\IsmithPasha\BanglaKhabar\DotNetApp\BanglaKhabar\BanglaKhabarWeb\bin\BanglaKhabarWeb.dll

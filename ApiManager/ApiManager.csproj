@@ -48,6 +48,7 @@
     <Compile Include="ApiModels\ApiRequest.cs" />
     <Compile Include="ApiModels\RequestModels.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="ModelsAdmin\OrdersAdmin\AdminOrderInfo.cs" />
     <Compile Include="Models\BasicModels\DayInfo.cs" />
     <Compile Include="Models\BasicModels\ParameterUserBasic.cs" />
     <Compile Include="Models\BasicModels\UserContact.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="Models\UserInfo.cs" />
     <Compile Include="Models\UserToVendorMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\AdminRepository.cs" />
     <Compile Include="Repository\ApiRepository.cs" />
     <Compile Include="Security\Encrypt.cs" />
   </ItemGroup>

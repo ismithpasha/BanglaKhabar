@@ -84,25 +84,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/16/2019 01:19:13</publishTime>
     </File>
     <File Include="bin/ApiManager.dll">
-      <publishTime>01/30/2019 02:05:49</publishTime>
+      <publishTime>02/11/2019 02:23:11</publishTime>
     </File>
     <File Include="bin/ApiManager.pdb">
-      <publishTime>01/30/2019 02:05:49</publishTime>
+      <publishTime>02/11/2019 02:23:11</publishTime>
     </File>
     <File Include="bin/ApplicationInsights.config">
       <publishTime>01/16/2019 01:19:13</publishTime>
     </File>
     <File Include="bin/BanglaKhabarWebApp.dll">
-      <publishTime>01/30/2019 02:06:26</publishTime>
+      <publishTime>02/11/2019 02:23:13</publishTime>
     </File>
     <File Include="bin/BanglaKhabarWebApp.pdb">
-      <publishTime>01/30/2019 02:06:26</publishTime>
+      <publishTime>02/11/2019 02:23:13</publishTime>
     </File>
     <File Include="bin/DbManager.dll">
-      <publishTime>01/24/2019 04:43:02</publishTime>
+      <publishTime>02/11/2019 02:23:11</publishTime>
     </File>
     <File Include="bin/DbManager.pdb">
-      <publishTime>01/24/2019 04:43:02</publishTime>
+      <publishTime>02/11/2019 02:23:11</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
       <publishTime>01/16/2019 01:19:13</publishTime>

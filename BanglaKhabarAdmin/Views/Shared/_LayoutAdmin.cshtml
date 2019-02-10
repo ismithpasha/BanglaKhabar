@@ -56,7 +56,25 @@
                     }
                     else
                     {
-                        <li><a href="@Url.Action("Logout", "Security")"><i class="fa fa-sign-out"> </i> Logout</a></li>
+                        <li><a href="@Url.Action("Index", "Home")"><i class="fa fa-home"> </i> Home</a></li>
+                       
+                        <li class="menu-has-children">
+                            <a href="#"><i class="fa fa-user-circle"> </i> Orders</a>
+                            <ul>
+                                <li><a href="@Url.Action("CreateOrder", "Admin")"><i class="fa fa-shopping-cart"> </i> Create Order</a></li>
+                                <li><a href="@Url.Action("DailyOrders", "Admin")"><i class="fa fa-shopping-cart"> </i> Daily Orders</a></li>
+                                <li><a href="@Url.Action("AllOrders", "Admin")"><i class="fa fa-shopping-cart"> </i> All Orders</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="menu-has-children">
+                            <a href="#"><i class="fa fa-user-circle"> </i> @Session["SessionUserFullName"].ToString()</a>
+                            <ul>
+                                <li><a href="@Url.Action("UserProfile", "User")"><i class="fa fa-user"> </i> Profile</a></li>
+                                <li><a href="@Url.Action("Logout", "Security")"><i class="fa fa-sign-out"> </i> Logout</a></li>
+                            </ul>
+                        </li>
+
                     }
 
                 </ul>
