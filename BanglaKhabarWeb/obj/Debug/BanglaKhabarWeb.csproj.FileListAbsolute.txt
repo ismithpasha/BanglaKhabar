@@ -554,3 +554,4 @@ E:\IsmithPasha\BanglaKhabar\DotNetApp\BanglaKhabar\BanglaKhabarWeb\obj\Debug\Ban
 E:\IsmithPasha\BanglaKhabar\DotNetApp\BanglaKhabar\BanglaKhabarWeb\obj\Debug\BanglaKhabarWeb.csproj.CopyComplete
 E:\IsmithPasha\BanglaKhabar\DotNetApp\BanglaKhabar\BanglaKhabarWeb\obj\Debug\BanglaKhabarWeb.dll
 E:\IsmithPasha\BanglaKhabar\DotNetApp\BanglaKhabar\BanglaKhabarWeb\obj\Debug\BanglaKhabarWeb.pdb
+D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\BanglaKhabar\BanglaKhabarWeb\obj\Debug\BanglaKhabarWeb.csprojAssemblyReference.cache

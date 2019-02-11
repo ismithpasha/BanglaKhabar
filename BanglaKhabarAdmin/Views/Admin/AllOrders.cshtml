@@ -6,14 +6,14 @@
 
 
 
-<div class="container">
+<div class="container-fluid">
     <br />
     @using BanglaKhabarAdmin.Models.ViewModels
 
     @model BanglaKhabarAdmin.Models.ViewModels.AllOrdersViewModel
 
 
-    <div class="row">
+    <div class="row" style="margin:20px;">
 
         @if (Model != null)
         {
@@ -58,23 +58,20 @@
 
                     @if (Model.OrderList != null)
                     {
-                        <table class="table table-bordered table-responsive">
+                        <table class="table table-bordered table-responsive" style="font-size:14px;">
                             <thead>
                                 <tr>
                                     <th>OrderId</th>
-                                    <th>Title 
-                                    <th>Description</th>
-                                    <th>Price</th>                                   
-                                    <th>Order Time</th>
-                                    <th>Delevery Date</th>
+                                    
+                                    <th style="width:15%;">Description</th>
+                                    <th style="width:12%;">Price</th>                                   
+                                    <th style="width:8%;">Order Time</th>
+                                    <th style="width:8%;">Delevery Date</th>
                                     <th>Quantity</th>
                                     <th>Delevery Address</th>
                                     <th>Receiver Name</th>
-                                    <th>User Remarks</th>
-                                    <th>Admin Remarks</th>
+                                    <th>Remarks</th>
                                     <th>Order Status</th>
-                                    <th>IsChangeAble</th>
-                                    <th>User Status</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -82,22 +79,20 @@
                                 {
                                 <tr>
                                     <td>@item.OrderId</td>
-                                   
-                                    <td>@item.TitleBn <br /> @item.TitleEn</td>
+
+
                                     <td>@item.DescriptionBn <br /> @item.DescriptionEn</td>
-                                    <td> <p>Regular Price: @item.RegularPrice /- Taka, </p> <p> Discount: @item.Discount %,</p><p>Price: @item.Price /- Taka</p></td>
-                                    
+                                    <td> <p>Regular: @item.RegularPrice /- Taka, <br /> Discount: @item.Discount %, <br /> <b>Price: @item.Price /- Taka </b></p></td>
+
                                     <td>@item.OrderTime</td>
-                                    <td>@item.DeleveryDate - @item.DeleveryDayName</td>
+                                    <td>@item.DeleveryDate.Replace("12:00:00 AM", "") - @item.DeleveryDayName</td>
                                     <td>@item.Quantity</td>
                                     <td>@item.DeleveryAddress</td>
+                                    <td>@item.FirstName</td> 
                                     <td>@item.ReceiverName</td>
-                                    <td>@item.UserRemarks</td>
-                                    <td>@item.AdminRemarks</td>
+                                    <td><b>User Remarks</b> @item.UserRemarks <br />  <b>Admin Remarks</b>  @item.AdminRemarks </td>
                                     <td>@item.OrderStatus</td>
-                                    <td>@item.IsChangeAble</td>
 
-                                    <td>@item.UserStatus</td>
 
                                 </tr>
                                 }
