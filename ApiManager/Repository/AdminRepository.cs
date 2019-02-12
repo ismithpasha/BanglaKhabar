@@ -38,6 +38,47 @@ namespace ApiManager.Repository
             return dTable;
         }
 
+        public DataTable GetOrderByDeleveryDate(string UserId,string DeleveryDate, ref string replay)
+        {
+            string msg_code = string.Empty;
+            string msg = string.Empty;
+            DataTable dTable = new DataTable();
+            try
+            {
+
+                objSqlProcManager = new SqlProcedureManager(connectionString);
+                dTable = objSqlProcManager.ExecuteDataTable("admin_Get_All_Orders_By_DeleveryDate", ref replay,
+                    UserId,
+                    DeleveryDate);
+
+            }
+            catch (Exception errorException)
+            {
+                throw errorException;
+            }
+            return dTable;
+        }
+
+        public DataTable GetOrderByCustomer(string UserId, string CustomerId, ref string replay)
+        {
+            string msg_code = string.Empty;
+            string msg = string.Empty;
+            DataTable dTable = new DataTable();
+            try
+            {
+
+                objSqlProcManager = new SqlProcedureManager(connectionString);
+                dTable = objSqlProcManager.ExecuteDataTable("admin_Get_All_Orders_By_DeleveryDate", ref replay,
+                    UserId,
+                    CustomerId);
+
+            }
+            catch (Exception errorException)
+            {
+                throw errorException;
+            }
+            return dTable;
+        }
 
         #endregion Orders
 

@@ -340,3 +340,7 @@ E:\IsmithPasha\BanglaKhabar\DotNetApp\BanglaKhabar\BanglaKhabarAdmin\bin\PagedLi
 E:\IsmithPasha\BanglaKhabar\DotNetApp\BanglaKhabar\BanglaKhabarAdmin\bin\PagedList.Mvc.dll
 E:\IsmithPasha\BanglaKhabar\DotNetApp\BanglaKhabar\BanglaKhabarAdmin\bin\PagedList.xml
 E:\IsmithPasha\BanglaKhabar\DotNetApp\BanglaKhabar\BanglaKhabarAdmin\bin\PagedList.Mvc.xml
+D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\BanglaKhabar\BanglaKhabarAdmin\bin\PagedList.dll
+D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\BanglaKhabar\BanglaKhabarAdmin\bin\PagedList.Mvc.dll
+D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\BanglaKhabar\BanglaKhabarAdmin\bin\PagedList.xml
+D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\BanglaKhabar\BanglaKhabarAdmin\bin\PagedList.Mvc.xml

@@ -49,6 +49,7 @@
     <Compile Include="ApiModels\RequestModels.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="ModelsAdmin\OrdersAdmin\AdminOrderInfo.cs" />
+    <Compile Include="ModelsAdmin\OrdersAdmin\ParaOrderByDate.cs" />
     <Compile Include="Models\BasicModels\DayInfo.cs" />
     <Compile Include="Models\BasicModels\ParameterUserBasic.cs" />
     <Compile Include="Models\BasicModels\UserContact.cs" />

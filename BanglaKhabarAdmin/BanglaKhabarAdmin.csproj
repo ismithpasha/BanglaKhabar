@@ -150,6 +150,7 @@
     </Compile>
     <Compile Include="Models\BasicModels\UserBasic.cs" />
     <Compile Include="Models\OrderModels\OrderInfo.cs" />
+    <Compile Include="Models\OrderModels\ParaOrderByCustomerDate.cs" />
     <Compile Include="Models\ResponseModels\ResponseMessage.cs" />
     <Compile Include="Models\SecurityModels\LoginEntity.cs" />
     <Compile Include="Models\UserModels\UserInfo.cs" />

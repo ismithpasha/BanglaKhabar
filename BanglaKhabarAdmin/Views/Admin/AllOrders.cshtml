@@ -12,13 +12,12 @@
     @model PagedList.IPagedList<BanglaKhabarAdmin.Models.OrderModels.OrderInfo>
   
 
-
     <div class="row" style="margin:20px;">
 
         @if (Model != null)
         {
 
-            <div style="background-color:#ffffff; height:auto; padding:15px; margin-top:50px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+            <div style="background-color:#ffffff; height:auto; padding:15px; margin-top:20px; margin-bottom:20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 
 
                 <h3 class="text-info"> Orders</h3>
@@ -52,7 +51,6 @@
                     <br /><br />
                 </form>*@
 
-                <br />
                 <hr />
 
 
@@ -61,13 +59,13 @@
                     <table class="table table-bordered table-responsive text-center" style="font-size:14px;">
                         <thead>
                             <tr class="text-danger">
-
+                                <th style="width:8%;">Delevery Date <span style="font-size:12px; color:brown;">(mm/dd/yyyy)</span> </th>
+                                <th>Quantity</th>
                                 <th style="width:15%;">Description</th>
                                 <th style="width:8%;">Tag</th>
                                 <th style="width:12%;">Price</th>
                                 <th style="width:8%;">Order Time</th>
-                                <th style="width:8%;">Delevery Date</th>
-                                <th>Quantity</th>
+
                                 <th>Delevery Address</th>
                                 <th style="width:12%;">Customer Information</th>
                                 <th>Receiver Name</th>
@@ -78,26 +76,44 @@
                         <tbody>
                             @foreach (var item in Model)
                             {
-                                <tr style="font-size:12px;">
+                            <tr style="font-size:12px;">
+                                <td>@item.DeleveryDate.Replace("12:00:00 AM", "") (@item.DeleveryDayName)</td>
+                                <td style="font-size:14px;"><b>@item.Quantity</b></td>
+                                <td style="font-size:12px;">@item.DescriptionBn <br /> @item.DescriptionEn</td>
+                                <td><b class="text-primary"> @item.TitleEn </b><br /> @item.TitleBn</td>
+                                <td> <p>Regular: @item.RegularPrice /- Taka, <br /> Discount: @item.Discount %, <br /> <b class="text-primary">Price: @item.Price /- Taka </b></p></td>
 
-                                    <td style="font-size:12px;">@item.DescriptionBn <br /> @item.DescriptionEn</td>
-                                    <td><b class="text-primary"> @item.TitleEn </b><br /> @item.TitleBn</td>
-                                    <td> <p>Regular: @item.RegularPrice /- Taka, <br /> Discount: @item.Discount %, <br /> <b class="text-primary">Price: @item.Price /- Taka </b></p></td>
+                                <td>@item.OrderTime</td>
 
-                                    <td>@item.OrderTime</td>
-                                    <td>@item.DeleveryDate.Replace("12:00:00 AM", "") (@item.DeleveryDayName)</td>
-                                    <td style="font-size:14px;"><b>@item.Quantity</b></td>
-                                    <td>@item.DeleveryAddress</td>
-                                    <td>
-                                        <b> @item.FirstName @item.LastName @item.NickName </b> <br />
-                                        Phone: @item.Phone , <br />Email: @item.Email
-                                    </td>
-                                    <td>@item.ReceiverName</td>
-                                    <td><b>User Remarks: </b> @item.UserRemarks <br />  <b>Admin Remarks: </b>  @item.AdminRemarks </td>
-                                    <td>@item.OrderStatus</td>
+                                <td>@item.DeleveryAddress</td>
+                                <td>
+                                    <b> @item.FirstName @item.LastName @item.NickName </b> <br />
+                                    Phone: @item.Phone , <br />Email: @item.Email
+                                </td>
+                                <td>@item.ReceiverName</td>
+                                <td><b>User Remarks: </b> @item.UserRemarks <br />  <b>Admin Remarks: </b>  @item.AdminRemarks </td>
 
-
-                                </tr>
+                                @if (item.OrderStatus.ToLower() == "initiated")
+                                {
+                                    <td style="font-weight:bolder;" class="bg-info text-white"> @item.OrderStatus.ToUpper()</td>
+                                }
+                                else if (item.OrderStatus.ToLower() == "cancled")
+                                {
+                                    <td style="font-weight:bolder;" class="bg-danger text-white"> @item.OrderStatus.ToUpper()</td>
+                                }
+                                else if (item.OrderStatus.ToLower() == "confirmed")
+                                {
+                                    <td style="font-weight:bolder;" class="bg-success text-white"> @item.OrderStatus.ToUpper()</td>
+                                }
+                                else if (item.OrderStatus.ToLower() == "completed")
+                                {
+                                    <td style="font-weight:1000;" class="bg-success text-white"> @item.OrderStatus.ToUpper()</td>
+                                }
+                                else
+                                {
+                                    <td style="font-weight:bolder;" class="bg-light text-primary"> @item.OrderStatus.ToUpper()</td>
+                                }
+                            </tr>
                             }
                         </tbody>
                     </table>
@@ -113,12 +129,12 @@
 </div>
                         
                     </div>
-                    <br />
+                    
                 }
 
 
             </div>
-            <br />
+           
         }
         else
         {
@@ -143,4 +159,4 @@
     </div>
 
 </div>
-
+<br /><br /><br />
