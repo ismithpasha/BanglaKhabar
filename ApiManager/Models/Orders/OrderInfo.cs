@@ -11,6 +11,7 @@ namespace ApiManager.Models.Orders
         public string OrderId { get; set; }
         public string MenuId { get; set; }
         public string CustomerId { get; set; }
+
         public string TitleBn { get; set; }
         public string TitleEn { get; set; }
         public string DescriptionBn { get; set; }

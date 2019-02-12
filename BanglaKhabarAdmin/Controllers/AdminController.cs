@@ -4,6 +4,7 @@ using BanglaKhabarAdmin.Models.ResponseModels;
 using BanglaKhabarAdmin.Models.ViewModels;
 using BanglaKhabarAdmin.NetworkModels;
 using Newtonsoft.Json;
+using PagedList;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,27 +27,41 @@ namespace BanglaKhabarAdmin.Controllers
             return View(); 
         }
 
-        public ActionResult AllOrders()
+        public ActionResult AllOrders(int? page)
         {
-            AllOrdersViewModel ordersViewModel = new AllOrdersViewModel();
+            try
+            {
+                int pageSize = 5;
+                int pageIndex = 1;
+                pageIndex = page.HasValue ? Convert.ToInt32(page) : 1;
+                List<OrderInfo> orderList = GetOrderList();
+                IPagedList<OrderInfo> listOrderInfo = orderList.ToPagedList(pageIndex, pageSize);
 
-
-            ordersViewModel.OrderList = GetOrderList();
-            
-            return View("AllOrders", ordersViewModel);
-          //  LoadAllOrders();
-           // return View();
+                return View("AllOrders", listOrderInfo);
+            }
+            catch
+            {
+                return null;
+            }
         }
 
-        public ActionResult LoadAllOrders() 
+        public ActionResult LoadAllOrders(int? page) 
         {
-            AllOrdersViewModel ordersViewModel = new AllOrdersViewModel();
+            try
+            {
+                int pageSize = 8;
+                int pageIndex = 1;
+                pageIndex = page.HasValue ? Convert.ToInt32(page) : 1;
+                List<OrderInfo> orderList = GetOrderList();
+                IPagedList<OrderInfo> listOrderInfo = orderList.ToPagedList(pageIndex, pageSize);
 
-
-            ordersViewModel.OrderList = GetOrderList();
-
-
-            return View("AllOrders", ordersViewModel);
+                return View("AllOrders", listOrderInfo);
+            }
+            catch
+            {
+                return null;
+            }
+           
         }
 
         public List<OrderInfo> GetOrderList() 

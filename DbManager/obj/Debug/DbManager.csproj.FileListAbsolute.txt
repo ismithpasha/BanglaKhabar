@@ -40,7 +40,6 @@ D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\B
 D:\DEVELOPMENT\Projects\BanglaKhabar\WebAPI\BanglaKhabarWeb\BanglaKhabarWebApp\BanglaKhabar\DbManager\obj\Debug\DbManager.pdb
 E:\IsmithPasha\BanglaKhabar\DotNetApp\BanglaKhabar\DbManager\bin\Debug\DbManager.dll
 E:\IsmithPasha\BanglaKhabar\DotNetApp\BanglaKhabar\DbManager\bin\Debug\DbManager.pdb
-E:\IsmithPasha\BanglaKhabar\DotNetApp\BanglaKhabar\DbManager\obj\Debug\DbManager.csprojAssemblyReference.cache
 E:\IsmithPasha\BanglaKhabar\DotNetApp\BanglaKhabar\DbManager\obj\Debug\DbManager.csproj.CoreCompileInputs.cache
 E:\IsmithPasha\BanglaKhabar\DotNetApp\BanglaKhabar\DbManager\obj\Debug\DbManager.dll
 E:\IsmithPasha\BanglaKhabar\DotNetApp\BanglaKhabar\DbManager\obj\Debug\DbManager.pdb

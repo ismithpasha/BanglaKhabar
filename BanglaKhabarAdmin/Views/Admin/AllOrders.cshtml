@@ -8,102 +8,117 @@
 
 <div class="container-fluid">
     <br />
-    @using BanglaKhabarAdmin.Models.ViewModels
-
-    @model BanglaKhabarAdmin.Models.ViewModels.AllOrdersViewModel
+    @using PagedList.Mvc
+    @model PagedList.IPagedList<BanglaKhabarAdmin.Models.OrderModels.OrderInfo>
+  
 
 
     <div class="row" style="margin:20px;">
 
         @if (Model != null)
         {
-          
-                <div style="background-color:#ffffff; height:auto; padding:15px; margin-top:50px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+
+            <div style="background-color:#ffffff; height:auto; padding:15px; margin-top:50px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 
 
-                    <h3 class="text-info"> Orders</h3>
+                <h3 class="text-info"> Orders</h3>
 
 
-                    @*<form action="@Url.Action("FindClassRoutine", "Home")" method="post">
+                @*<form action="@Url.Action("FindClassRoutine", "Home")" method="post">
 
 
-                        <div class="form-group">
-                            <h4>Day Name:</h4>
-                            <select class="form-control" id="dayName" name="dayName">
+                    <div class="form-group">
+                        <h4>Day Name:</h4>
+                        <select class="form-control" id="dayName" name="dayName">
 
-                                <option value="0">ALl</option>
-                                <option value="Saturday">Saturday</option>
-                                <option value="Sunday">Sunday</option>
-                                <option value="Monday">Monday</option>
-                                <option value="Tuesday">Tuesday</option>
-                                <option value="Wednesday">Wednesday</option>
-                                <option value="Wednesday">Wednesday</option>
+                            <option value="0">ALl</option>
+                            <option value="Saturday">Saturday</option>
+                            <option value="Sunday">Sunday</option>
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Wednesday">Wednesday</option>
 
-                            </select>
+                        </select>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <button type="submit" id="btnSubmit" class="btn btn-primary col-sm-4">Search</button>
+                        <div class="col-sm-8">
                         </div>
+                    </div>
+                    <br /><br />
+                </form>*@
 
-                     
-
-                        <div class="form-group">
-                            <button type="submit" id="btnSubmit" class="btn btn-primary col-sm-4">Search</button>
-                            <div class="col-sm-8">
-                            </div>
-                        </div>
-                        <br /><br />
-                    </form>*@
-
-                    <br />
-                    <hr />
+                <br />
+                <hr />
 
 
-                    @if (Model.OrderList != null)
-                    {
-                        <table class="table table-bordered table-responsive" style="font-size:14px;">
-                            <thead>
-                                <tr>
-                                    <th>OrderId</th>
-                                    
-                                    <th style="width:15%;">Description</th>
-                                    <th style="width:12%;">Price</th>                                   
-                                    <th style="width:8%;">Order Time</th>
-                                    <th style="width:8%;">Delevery Date</th>
-                                    <th>Quantity</th>
-                                    <th>Delevery Address</th>
-                                    <th>Receiver Name</th>
-                                    <th>Remarks</th>
-                                    <th>Order Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach (var item in Model.OrderList)
-                                {
-                                <tr>
-                                    <td>@item.OrderId</td>
+                @if (Model != null)
+                {
+                    <table class="table table-bordered table-responsive text-center" style="font-size:14px;">
+                        <thead>
+                            <tr class="text-danger">
 
+                                <th style="width:15%;">Description</th>
+                                <th style="width:8%;">Tag</th>
+                                <th style="width:12%;">Price</th>
+                                <th style="width:8%;">Order Time</th>
+                                <th style="width:8%;">Delevery Date</th>
+                                <th>Quantity</th>
+                                <th>Delevery Address</th>
+                                <th style="width:12%;">Customer Information</th>
+                                <th>Receiver Name</th>
+                                <th>Remarks</th>
+                                <th>Order Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr style="font-size:12px;">
 
-                                    <td>@item.DescriptionBn <br /> @item.DescriptionEn</td>
-                                    <td> <p>Regular: @item.RegularPrice /- Taka, <br /> Discount: @item.Discount %, <br /> <b>Price: @item.Price /- Taka </b></p></td>
+                                    <td style="font-size:12px;">@item.DescriptionBn <br /> @item.DescriptionEn</td>
+                                    <td><b class="text-primary"> @item.TitleEn </b><br /> @item.TitleBn</td>
+                                    <td> <p>Regular: @item.RegularPrice /- Taka, <br /> Discount: @item.Discount %, <br /> <b class="text-primary">Price: @item.Price /- Taka </b></p></td>
 
                                     <td>@item.OrderTime</td>
-                                    <td>@item.DeleveryDate.Replace("12:00:00 AM", "") - @item.DeleveryDayName</td>
-                                    <td>@item.Quantity</td>
+                                    <td>@item.DeleveryDate.Replace("12:00:00 AM", "") (@item.DeleveryDayName)</td>
+                                    <td style="font-size:14px;"><b>@item.Quantity</b></td>
                                     <td>@item.DeleveryAddress</td>
-                                    <td>@item.FirstName</td> 
+                                    <td>
+                                        <b> @item.FirstName @item.LastName @item.NickName </b> <br />
+                                        Phone: @item.Phone , <br />Email: @item.Email
+                                    </td>
                                     <td>@item.ReceiverName</td>
-                                    <td><b>User Remarks</b> @item.UserRemarks <br />  <b>Admin Remarks</b>  @item.AdminRemarks </td>
+                                    <td><b>User Remarks: </b> @item.UserRemarks <br />  <b>Admin Remarks: </b>  @item.AdminRemarks </td>
                                     <td>@item.OrderStatus</td>
 
 
                                 </tr>
-                                }
-                            </tbody>
-                        </table>
+                            }
+                        </tbody>
+                    </table>
 
-                    }
+                    <div class="row text-center" style="margin-left:auto; margin-right:auto; align-items:center;">
+                        
+                            <div class="pagination">
+                                
+                                    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)
+                                    of @Model.PageCount
+                                <b style="margin-left:10px; font-size:18px;">
+                                @Html.PagedListPager(Model, page => Url.Action("ALLOrders", new { page })) </b>
+</div>
+                        
+                    </div>
+                    <br />
+                }
 
 
-                </div>
-           
+            </div>
+            <br />
         }
         else
         {

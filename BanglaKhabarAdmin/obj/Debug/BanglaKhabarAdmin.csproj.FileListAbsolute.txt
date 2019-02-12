@@ -336,3 +336,7 @@ E:\IsmithPasha\BanglaKhabar\DotNetApp\BanglaKhabar\BanglaKhabarAdmin\obj\Debug\B
 E:\IsmithPasha\BanglaKhabar\DotNetApp\BanglaKhabar\BanglaKhabarAdmin\obj\Debug\BanglaKhabarAdmin.csproj.CopyComplete
 E:\IsmithPasha\BanglaKhabar\DotNetApp\BanglaKhabar\BanglaKhabarAdmin\obj\Debug\BanglaKhabarAdmin.dll
 E:\IsmithPasha\BanglaKhabar\DotNetApp\BanglaKhabar\BanglaKhabarAdmin\obj\Debug\BanglaKhabarAdmin.pdb
+E:\IsmithPasha\BanglaKhabar\DotNetApp\BanglaKhabar\BanglaKhabarAdmin\bin\PagedList.dll
+E:\IsmithPasha\BanglaKhabar\DotNetApp\BanglaKhabar\BanglaKhabarAdmin\bin\PagedList.Mvc.dll
+E:\IsmithPasha\BanglaKhabar\DotNetApp\BanglaKhabar\BanglaKhabarAdmin\bin\PagedList.xml
+E:\IsmithPasha\BanglaKhabar\DotNetApp\BanglaKhabar\BanglaKhabarAdmin\bin\PagedList.Mvc.xml

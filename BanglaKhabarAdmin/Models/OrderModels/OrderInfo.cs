@@ -10,6 +10,13 @@ namespace BanglaKhabarAdmin.Models.OrderModels
         public string OrderId { get; set; }
         public string MenuId { get; set; }
         public string CustomerId { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string NickName { get; set; }
+        public string BirthDate { get; set; }
+        public string Gender { get; set; }
+        public string Email { get; set; }
+        public string Phone { get; set; }
         public string TitleBn { get; set; }
         public string TitleEn { get; set; }
         public string DescriptionBn { get; set; }
