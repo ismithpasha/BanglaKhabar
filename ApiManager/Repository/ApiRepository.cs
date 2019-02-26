@@ -455,6 +455,45 @@ namespace ApiManager.Repository
             return res;
         }
 
+         public string[] CancleOrderByUser(CancleOrderEntity objOrder, ref string replay) 
+                {
+                    string[] res = new string[4];
+             
+                    string msg_code = string.Empty;
+                    string msg = string.Empty;
+
+                    try
+                    {
+                        objSqlProcManager = new SqlProcedureManager(connectionString);
+                        string spname = "sp_Cancel_Order_ByUser";
+
+                        var result = objSqlProcManager.ExecuteNonQuery(spname, ref replay,
+                                objOrder.OrderId,
+                                objOrder.CustomerId
+                                
+                        );
+
+                        if (result > 0)
+                        {
+                            res[0] = "Y";
+                            res[1] = "Order cancled successfully.";
+                        }
+                        else
+                        {
+                            res[0] = "N";
+                            res[1] = "Failed to cancle order.";
+                        }
+
+
+                        return res;
+                    }
+                    catch (Exception errorException)
+                    {
+                        throw errorException;
+                    }
+                    return res;
+                }
+
 
         #endregion Order
 

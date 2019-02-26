@@ -60,6 +60,7 @@
     <Compile Include="Models\LoginInfo.cs" />
     <Compile Include="Models\NoticeInfo.cs" />
     <Compile Include="Models\OneToOneMessage.cs" />
+    <Compile Include="Models\Orders\CancleOrderEntity.cs" />
     <Compile Include="Models\Orders\CustomerOrder.cs" />
     <Compile Include="Models\Orders\MenuItems.cs" />
     <Compile Include="Models\Orders\OrderInfo.cs" />

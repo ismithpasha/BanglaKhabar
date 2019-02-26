@@ -84,25 +84,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/16/2019 01:19:13</publishTime>
     </File>
     <File Include="bin/ApiManager.dll">
-      <publishTime>02/13/2019 02:04:43</publishTime>
+      <publishTime>02/26/2019 23:32:27</publishTime>
     </File>
     <File Include="bin/ApiManager.pdb">
-      <publishTime>02/13/2019 02:04:43</publishTime>
+      <publishTime>02/26/2019 23:32:27</publishTime>
     </File>
     <File Include="bin/ApplicationInsights.config">
       <publishTime>01/16/2019 01:19:13</publishTime>
     </File>
     <File Include="bin/BanglaKhabarWebApp.dll">
-      <publishTime>02/13/2019 02:04:44</publishTime>
+      <publishTime>02/26/2019 23:32:28</publishTime>
     </File>
     <File Include="bin/BanglaKhabarWebApp.pdb">
-      <publishTime>02/13/2019 02:04:44</publishTime>
+      <publishTime>02/26/2019 23:32:28</publishTime>
     </File>
     <File Include="bin/DbManager.dll">
-      <publishTime>02/13/2019 02:04:43</publishTime>
+      <publishTime>02/26/2019 23:32:26</publishTime>
     </File>
     <File Include="bin/DbManager.pdb">
-      <publishTime>02/13/2019 02:04:43</publishTime>
+      <publishTime>02/26/2019 23:32:26</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
       <publishTime>01/16/2019 01:19:13</publishTime>
@@ -402,7 +402,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/16/2019 01:19:13</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>01/30/2019 02:05:51</publishTime>
+      <publishTime>02/26/2019 23:32:28</publishTime>
     </File>
   </ItemGroup>
 </Project>

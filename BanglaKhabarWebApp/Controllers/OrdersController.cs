@@ -468,6 +468,44 @@ namespace BanglaKhabarWebApp.Controllers
             return rM;
         }
 
+        [HttpPost]
+        [Route("CancleOrderByUser")]
+        public ResponseMessage CancleOrderByUser(CancleOrderEntity objOrder)
+        {
+            string reply = string.Empty;
+
+            ResponseMessage rM = new ResponseMessage();
+            try
+            {
+                var result = apiRepository.CancleOrderByUser(objOrder, ref reply);
+                if (result[0] == "Y")
+                {
+
+                    rM.MessageCode = "Y";
+                    rM.Message = result[1];
+                    rM.SystemMessage = reply;
+                    rM.Content = result[1];
+                }
+                else
+                {
+                    rM.MessageCode = "N";
+                    rM.Message = result[1];
+                    rM.SystemMessage = reply;
+                    rM.Content = result[1];
+                }
+            }
+            catch (Exception ex)
+            {
+                rM.MessageCode = "N";
+                rM.Message = "Server Error";
+                rM.SystemMessage = ex.Message;
+                rM.Content = "Server Error";
+                return rM;
+            }
+
+
+            return rM;
+        }
 
 
 
